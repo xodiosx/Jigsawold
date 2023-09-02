@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8"><meta name="viewport" content="width = device-width, initial-scale = 1">
+
+<style>
+            body, html {
+
+                height: 90%;
+width: 100%;
+            }
+h1{
+color: #dff;
+font-weight: bold;
+   font-size: 20px;
+
+                font-family: monospace;
+                font-weight: bold;                                
+}
+h2{
+color: blue;
+font-weight: bold;
+   font-size: 9px;
+
+                font-family: monospace;
+                font-weight: bold;                                
+}
+            body {
+background: url(ico/gba.png) no-repeat  -50px 250px;
+                font-family: monospace;
+                font-weight: bold;
+                font-size: 12px;
+                margin: 0;
+                overflow: hidden;
+                background-color: #222
+            }
+
+            body, #box {
+margin: 0;
+	
+                display: fixed;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #box {
+background: url(ico/char.png) no-repeat  -50px 50px;
+opacity: 70%;
+                color: #aaa;
+                height: 20em;
+                width: 30em;
+                max-width: 80%;
+                max-height: 80%;
+                background-color: #333;
+                border-radius: 0.4em;
+                border: 2px solid #555;
+                position: relative;
+                flex-direction: column;
+                transition-duration: 0.2s;
+                overflow: hidden
+            }
+
+            #box:hover, #box[drag] {
+                border-color: #38f;
+                color: #ddd
+            }
+
+            #input {
+                cursor: pointer;
+                position: absolute;
+                left: 65px;
+                top: 70px;
+                width: 50%;
+                height: 20%;
+                  align-items: center;
+                justify-content: center;
+            }
+
+            #display {
+position: relative;
+                width: 100%;
+               height: 100%;
+top: 2px;
+}
+                
+#game {
+      position: absolute;
+width: 100%;
+                height: 100%;
+top: -1px;
+            }
+
+            select, button {
+                padding: 0.6em 0.4em;
+                margin: 0.5em;
+                width: 15em;
+                max-width: 100%;
+                font-family: monospace;
+                font-weight: bold;
+                font-size: 16px;
+                background-color: #444;
+                color: #dff;
+                border-radius: 0.4em;
+                border: 1px solid #555;
+                cursor: pointer;
+                transition-duration: 0.2s
+            }
+
+            select:hover, button:hover {
+border-color: #38f;
+                
+                background-color: #666;
+                color: #ddd
+            }
+#input:hover {
+border-color: #38f;
+                
+                background-color: green;
+                cursor: pointer;
+                position: absolute;
+                left: 65px;
+                top: 70px;
+                width: 50%;
+                height: 20%;
+                  align-items: center;
+                justify-content: center;
+            }
+#status {
+ left:40%;
+bottom:98%;
+font-size:13px;   
+ height:0px;    
+color: lightgreen;
+  display: fixed;
+height: 0px;
+  justify-content: center;
+  align-items: center;
+z-index:99999; !important;
+position:absolute;
+overflow: visible; !important;
+}   
+        </style>
+
+   <meta charset="UTF-8">
+   <link rel="shortcut icon" href="./.favicon.ico">
+   <title>جيم بوي ادڤانس</title>
+
+   <link rel="stylesheet" href="./.stylge.css">
+   <script src="./.sorttable.js"></script>
+<script type="text/javascript" src="../chk.js"></script><script type="text/javascript" src="../imgon.js"></script><style type="text/css">* {user-select: auto !important; -webkit-user-select: auto !important;}</style></head>
+
+
+    
+
+<body>
+ 
+	<p id="status">متصل بل شبكة</p>
+<center>
+<div id="stuff">
+<h1>محطة ألعاب جيم بوي ادڤانس</h1>
+</div>
+<script>
+</script>
+	<div id="box">
+<select id="rom" name="rom">
+<option value="">- اختيار لعبة - </option><option value="1942.zip">1942.zip
+</option><option value="1943.zip">1943.zip
+</option><option value="3 Games in 1 - Candy land + Chutes and ladders + memory (U).zip">3 Games in 1 - Candy land + Chutes and ladders + memory (U).zip
+</option><option value="4 Fantasticos - Flame On.zip">4 Fantasticos - Flame On.zip
+</option><option value="4 Fantasticos.zip">4 Fantasticos.zip
+</option><option value="Action Replay GBX.zip">Action Replay GBX.zip
+</option><option value="Advance GTA.zip">Advance GTA.zip
+</option><option value="Advance Wars 2 [E].zip">Advance Wars 2 [E].zip
+</option><option value="Advance Wars [E].zip">Advance Wars [E].zip
+</option><option value="Alien Hominid [E].zip">Alien Hominid [E].zip
+</option><option value="Alienators - Evolution Continues.zip">Alienators - Evolution Continues.zip
+</option><option value="American Bass Challenge.zip">American Bass Challenge.zip
+</option><option value="Animaniacs - Lights, Camera, Action! [E].zip">Animaniacs - Lights, Camera, Action! [E].zip
+</option><option value="Army Men - Operation Green [E].zip">Army Men - Operation Green [E].zip
+</option><option value="Army Men - Operation Green.zip">Army Men - Operation Green.zip
+</option><option value="Army Men - Turf Wars.zip">Army Men - Turf Wars.zip
+</option><option value="Army Men Advance [E].zip">Army Men Advance [E].zip
+</option><option value="Astroboy - Omega Factor [E].zip">Astroboy - Omega Factor [E].zip
+</option><option value="Atlantis - The Lost Empire.zip">Atlantis - The Lost Empire.zip
+</option><option value="Avatar - The Burning Earth.zip">Avatar - The Burning Earth.zip
+</option><option value="Avatar - The Last Airbender.zip">Avatar - The Last Airbender.zip
+</option><option value="Avatar - The Legend of Aang.zip">Avatar - The Legend of Aang.zip
+</option><option value="Banjo Kazooie - Grunty's Revenge [E].zip">Banjo Kazooie - Grunty's Revenge [E].zip
+</option><option value="Banjo Pilot [E].zip">Banjo Pilot [E].zip
+</option><option value="Batman Begins [E].zip">Batman Begins [E].zip
+</option><option value="Batman Vengeance.zip">Batman Vengeance.zip
+</option><option value="Beyblade G-Revolution [E].zip">Beyblade G-Revolution [E].zip
+</option><option value="Beyblade V-Force - Ultimate Blader Jam [E].zip">Beyblade V-Force - Ultimate Blader Jam [E].zip
+</option><option value="Boktai - The sun is in your hand [E].zip">Boktai - The sun is in your hand [E].zip
+</option><option value="Boktai 2 - Solar Boy Django [E].zip">Boktai 2 - Solar Boy Django [E].zip
+</option><option value="Bomberman Tournament.zip">Bomberman Tournament.zip
+</option><option value="Breath Of Fire.zip">Breath Of Fire.zip
+</option><option value="Breath of Fire [E].zip">Breath of Fire [E].zip
+</option><option value="Britney's Dance Beat.zip">Britney's Dance Beat.zip
+</option><option value="Broken Sword [E].zip">Broken Sword [E].zip
+</option><option value="Bruce Lee - Return Of The Legend [E].zip">Bruce Lee - Return Of The Legend [E].zip
+</option><option value="Buffy - The Vampire Slayer.zip">Buffy - The Vampire Slayer.zip
+</option><option value="Buscando a Nemo + Buscando a Nemo -  The Contuining Adventures [E].zip">Buscando a Nemo + Buscando a Nemo -  The Contuining Adventures [E].zip
+</option><option value="Bust a Move.zip">Bust a Move.zip
+</option><option value="CIMA The Enemy [E].zip">CIMA The Enemy [E].zip
+</option><option value="CONTRA Advance Alen Wars EX.zip">CONTRA Advance Alen Wars EX.zip
+</option><option value="CT Special Forces 2 - Back To Hell [E].zip">CT Special Forces 2 - Back To Hell [E].zip
+</option><option value="CT Special Forces 3 - Bio Terror [E].zip">CT Special Forces 3 - Bio Terror [E].zip
+</option><option value="CT Special Forces [E].zip">CT Special Forces [E].zip
+</option><option value="Caesar's Palace Advance.zip">Caesar's Palace Advance.zip
+</option><option value="Carmaggedon [E][GBC].zip">Carmaggedon [E][GBC].zip
+</option><option value="Carrera Power [E].zip">Carrera Power [E].zip
+</option><option value="Cars.zip">Cars.zip
+</option><option value="Cartoon Network - Block Party.zip">Cartoon Network - Block Party.zip
+</option><option value="Cartoon Network - Speedway.zip">Cartoon Network - Speedway.zip
+</option><option value="Castlevania - Aria Of Sorrow.zip">Castlevania - Aria Of Sorrow.zip
+</option><option value="Castlevania - Harmony Of Dissonance [E].zip">Castlevania - Harmony Of Dissonance [E].zip
+</option><option value="Castlevania Aria of Sorrow [E].zip">Castlevania Aria of Sorrow [E].zip
+</option><option value="Castlevania Circle of the Moon.zip">Castlevania Circle of the Moon.zip
+</option><option value="Catwoman [E].zip">Catwoman [E].zip
+</option><option value="Charlie And The Chocolate Factory [E].zip">Charlie And The Chocolate Factory [E].zip
+</option><option value="Chessmaster [E].zip">Chessmaster [E].zip
+</option><option value="Chu Chu Rocket [E].zip">Chu Chu Rocket [E].zip
+</option><option value="Code Breaker.zip">Code Breaker.zip
+</option><option value="Colin McRae Rally 2.0.zip">Colin McRae Rally 2.0.zip
+</option><option value="Columns Crown [E].zip">Columns Crown [E].zip
+</option><option value="Comix Zone [E].zip">Comix Zone [E].zip
+</option><option value="Crash Bandicoot - Fusion [E].zip">Crash Bandicoot - Fusion [E].zip
+</option><option value="Crash Bandicoot - Purple Ripto's Rampage.zip">Crash Bandicoot - Purple Ripto's Rampage.zip
+</option><option value="Crash Bandicoot - The Huge Adventure.zip">Crash Bandicoot - The Huge Adventure.zip
+</option><option value="Crash Bandicoot 2 - Ntranced.zip">Crash Bandicoot 2 - Ntranced.zip
+</option><option value="Crash Bandicoot 2 N-Tranced [E].zip">Crash Bandicoot 2 N-Tranced [E].zip
+</option><option value="Crash Bandicoot Fusion [E].zip">Crash Bandicoot Fusion [E].zip
+</option><option value="Crash Bandicoot XS [E].zip">Crash Bandicoot XS [E].zip
+</option><option value="Crash Bandicoot.zip">Crash Bandicoot.zip
+</option><option value="Crash Nitro Kart [E].zip">Crash Nitro Kart [E].zip
+</option><option value="Crazy Taxi - Catch a Ride [E].zip">Crazy Taxi - Catch a Ride [E].zip
+</option><option value="Creatures [E].zip">Creatures [E].zip
+</option><option value="Cruis'n Velocity.zip">Cruis'n Velocity.zip
+</option><option value="Danny Phantom - Urban Jungle.zip">Danny Phantom - Urban Jungle.zip
+</option><option value="Daredevil [E].zip">Daredevil [E].zip
+</option><option value="Darius R.zip">Darius R.zip
+</option><option value="Dave Mirra Freestyle BMX 2.zip">Dave Mirra Freestyle BMX 2.zip
+</option><option value="David Beckham Soccer [E].zip">David Beckham Soccer [E].zip
+</option><option value="Denki Blocks [E].zip">Denki Blocks [E].zip
+</option><option value="Dexter's Lab - Deesaster Strikes [E].zip">Dexter's Lab - Deesaster Strikes [E].zip
+</option><option value="Digimon - Battle Spirit 2 [E].zip">Digimon - Battle Spirit 2 [E].zip
+</option><option value="Digimon - Battle Spirit 2.zip">Digimon - Battle Spirit 2.zip
+</option><option value="Digimon - Battle Spirit [E].zip">Digimon - Battle Spirit [E].zip
+</option><option value="Digimon - Battle spirit 1.zip">Digimon - Battle spirit 1.zip
+</option><option value="Digimon Racing [E].zip">Digimon Racing [E].zip
+</option><option value="Donald Duck Advance [E].zip">Donald Duck Advance [E].zip
+</option><option value="Donkey Kong - King of Swing [E].zip">Donkey Kong - King of Swing [E].zip
+</option><option value="Donkey Kong Country 1  [E].zip">Donkey Kong Country 1  [E].zip
+</option><option value="Donkey Kong Country 2  [E].zip">Donkey Kong Country 2  [E].zip
+</option><option value="Donkey Kong Country 3  [E].zip">Donkey Kong Country 3  [E].zip
+</option><option value="Doom 2.zip">Doom 2.zip
+</option><option value="Doom.zip">Doom.zip
+</option><option value="Double Dragon Advance.zip">Double Dragon Advance.zip
+</option><option value="Dr. Mario &amp; Puzzle League.zip">Dr. Mario &amp; Puzzle League.zip
+</option><option value="Dragon Ball GT - Transformation.zip">Dragon Ball GT - Transformation.zip
+</option><option value="Dragon Ball Z (juego de cartas).zip">Dragon Ball Z (juego de cartas).zip
+</option><option value="Dragon Ball Z - Advance adventure  [E].zip">Dragon Ball Z - Advance adventure  [E].zip
+</option><option value="Dragon Ball Z - Bukuu Tougeki.zip">Dragon Ball Z - Bukuu Tougeki.zip
+</option><option value="Dragon Ball Z - Buu's Fury.zip">Dragon Ball Z - Buu's Fury.zip
+</option><option value="Dragon Ball Z - Supersonic Warriors [E].zip">Dragon Ball Z - Supersonic Warriors [E].zip
+</option><option value="Dragon Ball Z - Taiketsu.zip">Dragon Ball Z - Taiketsu.zip
+</option><option value="Dragon Ball Z - The Legacy of Goku II [E].zip">Dragon Ball Z - The Legacy of Goku II [E].zip
+</option><option value="Dragon Ball Z Supersonic Warriors.zip">Dragon Ball Z Supersonic Warriors.zip
+</option><option value="DragonBall Z Taiketsu [E].zip">DragonBall Z Taiketsu [E].zip
+</option><option value="Driven [E].zip">Driven [E].zip
+</option><option value="Driver 2 Advance [E].zip">Driver 2 Advance [E].zip
+</option><option value="Duel Masters - Kaijudo showdown [E].zip">Duel Masters - Kaijudo showdown [E].zip
+</option><option value="Duel Masters - Sempai Legends.zip">Duel Masters - Sempai Legends.zip
+</option><option value="Dynasty Warriors Advance [E].zip">Dynasty Warriors Advance [E].zip
+</option><option value="ESPN Final Round Golf 2002.zip">ESPN Final Round Golf 2002.zip
+</option><option value="ESPN Great Outdoor Games Bass 2002.zip">ESPN Great Outdoor Games Bass 2002.zip
+</option><option value="ESPN X Games Skateboarding.zip">ESPN X Games Skateboarding.zip
+</option><option value="ET The Extra Terrestrial.zip">ET The Extra Terrestrial.zip
+</option><option value="Earthworm Jim.zip">Earthworm Jim.zip
+</option><option value="Ecks vs Sever [E].zip">Ecks vs Sever [E].zip
+</option><option value="Eragon [E].zip">Eragon [E].zip
+</option><option value="European Super League [E].zip">European Super League [E].zip
+</option><option value="Extreme Ghostbusters - Code Ecto-1 [E].zip">Extreme Ghostbusters - Code Ecto-1 [E].zip
+</option><option value="F-14 Tomcat.zip">F-14 Tomcat.zip
+</option><option value="F-24 Stealth Fighter.zip">F-24 Stealth Fighter.zip
+</option><option value="F-Zero - Maximum Velocity.zip">F-Zero - Maximum Velocity.zip
+</option><option value="F-Zero GP Legend.zip">F-Zero GP Legend.zip
+</option><option value="FA-18F Super Hornet.zip">FA-18F Super Hornet.zip
+</option><option value="FIFA 06 [E].zip">FIFA 06 [E].zip
+</option><option value="FIFA 2005 [E].zip">FIFA 2005 [E].zip
+</option><option value="Fifa Word Cup Germany 2006 [E].zip">Fifa Word Cup Germany 2006 [E].zip
+</option><option value="Final Fantasy I y II [E].zip">Final Fantasy I y II [E].zip
+</option><option value="Final Fantasy Tactics [E].zip">Final Fantasy Tactics [E].zip
+</option><option value="Final Fantasy V Advance [E].zip">Final Fantasy V Advance [E].zip
+</option><option value="Final Fantasy VI Advance [E].zip">Final Fantasy VI Advance [E].zip
+</option><option value="Final Fight One.zip">Final Fight One.zip
+</option><option value="Fire Emblem - Fuuin no Tsurugi [E].zip">Fire Emblem - Fuuin no Tsurugi [E].zip
+</option><option value="Fire Emblem - The Sacred Stones [E].zip">Fire Emblem - The Sacred Stones [E].zip
+</option><option value="Fire Pro Wrestling.zip">Fire Pro Wrestling.zip
+</option><option value="Fortress.zip">Fortress.zip
+</option><option value="Froggers Adventures - Temple of the Frog [E].zip">Froggers Adventures - Temple of the Frog [E].zip
+</option><option value="GO! Go! Beckham [E].zip">GO! Go! Beckham [E].zip
+</option><option value="GT Advance - Championship Racing.zip">GT Advance - Championship Racing.zip
+</option><option value="GT Advance 2 - Rally Racing.zip">GT Advance 2 - Rally Racing.zip
+</option><option value="GT Advance 3 - Pro Concept Racing.zip">GT Advance 3 - Pro Concept Racing.zip
+</option><option value="GT Racers.zip">GT Racers.zip
+</option><option value="Game Shark GBA [E].zip">Game Shark GBA [E].zip
+</option><option value="Gekido [E].zip">Gekido [E].zip
+</option><option value="Ghost Rider [E].zip">Ghost Rider [E].zip
+</option><option value="Ghouls'n Ghosts.zip">Ghouls'n Ghosts.zip
+</option><option value="Godzilla Domination.zip">Godzilla Domination.zip
+</option><option value="Golden Sun 1 [E].zip">Golden Sun 1 [E].zip
+</option><option value="Golden Sun 2 - La edad perdida [E].zip">Golden Sun 2 - La edad perdida [E].zip
+</option><option value="Gradius Advance.zip">Gradius Advance.zip
+</option><option value="Gradius Galaxies.zip">Gradius Galaxies.zip
+</option><option value="Grand Theft Auto Advance [E].zip">Grand Theft Auto Advance [E].zip
+</option><option value="Grim Adventures Of Billy &amp; Mandy.zip">Grim Adventures Of Billy &amp; Mandy.zip
+</option><option value="Guilty Gear X [E].zip">Guilty Gear X [E].zip
+</option><option value="Gunstar Future Heroes [E].zip">Gunstar Future Heroes [E].zip
+</option><option value="Harry Potter I - Piedra Filosofal [E].zip">Harry Potter I - Piedra Filosofal [E].zip
+</option><option value="Harry Potter II - Camara Secreta [E].zip">Harry Potter II - Camara Secreta [E].zip
+</option><option value="Harry Potter III - El Pricioner de Azkabam [E].zip">Harry Potter III - El Pricioner de Azkabam [E].zip
+</option><option value="Harry Potter IV - El Caliz del Fuego [E].zip">Harry Potter IV - El Caliz del Fuego [E].zip
+</option><option value="Harry Potter V - La Orden del Fenix [E].zip">Harry Potter V - La Orden del Fenix [E].zip
+</option><option value="Harvest Moon Friends of Mineral Town.zip">Harvest Moon Friends of Mineral Town.zip
+</option><option value="High Heat Baseball 2002 [E].zip">High Heat Baseball 2002 [E].zip
+</option><option value="Hombres de Negro - the series.zip">Hombres de Negro - the series.zip
+</option><option value="Hot Potato.zip">Hot Potato.zip
+</option><option value="Hot Wheels Burnin Rubber.zip">Hot Wheels Burnin Rubber.zip
+</option><option value="Ice Age [E].zip">Ice Age [E].zip
+</option><option value="Inspector Gadget Racing [E].zip">Inspector Gadget Racing [E].zip
+</option><option value="Inspector Gadget [E].zip">Inspector Gadget [E].zip
+</option><option value="International Karate Advanced.zip">International Karate Advanced.zip
+</option><option value="International Superstar Soccer (E).zip">International Superstar Soccer (E).zip
+</option><option value="Iridion 3D.zip">Iridion 3D.zip
+</option><option value="Jackie Chan Adventures - Legend Of The Dark Hand.zip">Jackie Chan Adventures - Legend Of The Dark Hand.zip
+</option><option value="Jimmy Neutron - Boy Genius.zip">Jimmy Neutron - Boy Genius.zip
+</option><option value="Jurassic Park 3 - DNA Factor [E].zip">Jurassic Park 3 - DNA Factor [E].zip
+</option><option value="Jurassic Park 3 - Island Attack [E].zip">Jurassic Park 3 - Island Attack [E].zip
+</option><option value="Jurassic Park 3 - Park Builder [E].zip">Jurassic Park 3 - Park Builder [E].zip
+</option><option value="Justice League - Chronicles.zip">Justice League - Chronicles.zip
+</option><option value="Justice League - Injustice For All [E].zip">Justice League - Injustice For All [E].zip
+</option><option value="Justice League Heroes - The Flash [E].zip">Justice League Heroes - The Flash [E].zip
+</option><option value="Kao The Kangaroo [E].zip">Kao The Kangaroo [E].zip
+</option><option value="King Kong - The 8th Wonder Of The World [E].zip">King Kong - The 8th Wonder Of The World [E].zip
+</option><option value="Kingdom Hearts - Chain of Memories [E].zip">Kingdom Hearts - Chain of Memories [E].zip
+</option><option value="Kirby  Nightmare in Dreamland.zip">Kirby  Nightmare in Dreamland.zip
+</option><option value="Kirby &amp; The Amazing Mirror [E].zip">Kirby &amp; The Amazing Mirror [E].zip
+</option><option value="Kirby Star Fountain of Dream [J].zip">Kirby Star Fountain of Dream [J].zip
+</option><option value="Klonoa - Empire of Dreams [E].zip">Klonoa - Empire of Dreams [E].zip
+</option><option value="Klonoa Heroes - Densetsu no Star Medal [J].zip">Klonoa Heroes - Densetsu no Star Medal [J].zip
+</option><option value="Konami Collector's Series - Arcade Classics [E].zip">Konami Collector's Series - Arcade Classics [E].zip
+</option><option value="Krazy Racers.zip">Krazy Racers.zip
+</option><option value="Kuru Kuru Kururin.zip">Kuru Kuru Kururin.zip
+</option><option value="Lego Bionicle.zip">Lego Bionicle.zip
+</option><option value="Lego Island 2.zip">Lego Island 2.zip
+</option><option value="Los Sims - Bustin' Out [E].zip">Los Sims - Bustin' Out [E].zip
+</option><option value="Los Sims 2 [E].zip">Los Sims 2 [E].zip
+</option><option value="Los Sims en la ciudad [E].zip">Los Sims en la ciudad [E].zip
+</option><option value="Lucky Luke - Wanted! [E].zip">Lucky Luke - Wanted! [E].zip
+</option><option value="Lunar Legend.zip">Lunar Legend.zip
+</option><option value="M&amp;M's Blast!.zip">M&amp;M's Blast!.zip
+</option><option value="M-Type.zip">M-Type.zip
+</option><option value="Madden 2002.zip">Madden 2002.zip
+</option><option value="Magi Nation [J].zip">Magi Nation [J].zip
+</option><option value="Mario &amp; Luigi Superstar Saga [E].zip">Mario &amp; Luigi Superstar Saga [E].zip
+</option><option value="Mario Golf - Advance Tour [E].zip">Mario Golf - Advance Tour [E].zip
+</option><option value="Mario Kart - Super Circuit [E].zip">Mario Kart - Super Circuit [E].zip
+</option><option value="Mario Party Advance [E].zip">Mario Party Advance [E].zip
+</option><option value="Mario Tennis Power Tour [E].zip">Mario Tennis Power Tour [E].zip
+</option><option value="Mario Tennis[GBC].zip">Mario Tennis[GBC].zip
+</option><option value="Marvel - Ultimate Alliance.zip">Marvel - Ultimate Alliance.zip
+</option><option value="Mat Hoffman's Pro BMX [Frances].zip">Mat Hoffman's Pro BMX [Frances].zip
+</option><option value="Medabots - Metabee Version.zip">Medabots - Metabee Version.zip
+</option><option value="Medabots AX - Metabee Version [E].zip">Medabots AX - Metabee Version [E].zip
+</option><option value="Medabots AX - Rokusho Version [E].zip">Medabots AX - Rokusho Version [E].zip
+</option><option value="Medal Of Honor - Infiltrator.zip">Medal Of Honor - Infiltrator.zip
+</option><option value="Medal Of Honor Underground.zip">Medal Of Honor Underground.zip
+</option><option value="MegaMan 1 [GB].zip">MegaMan 1 [GB].zip
+</option><option value="MegaMan 2 [GB].zip">MegaMan 2 [GB].zip
+</option><option value="MegaMan 3 [GB].zip">MegaMan 3 [GB].zip
+</option><option value="MegaMan 4 [GB].zip">MegaMan 4 [GB].zip
+</option><option value="MegaMan 5 [GB].zip">MegaMan 5 [GB].zip
+</option><option value="MegaMan Battle Network 1.zip">MegaMan Battle Network 1.zip
+</option><option value="MegaMan Battle Network 2.zip">MegaMan Battle Network 2.zip
+</option><option value="MegaMan Xtreme 1 [GBC].zip">MegaMan Xtreme 1 [GBC].zip
+</option><option value="MegaMan Xtreme 2 [GBC].zip">MegaMan Xtreme 2 [GBC].zip
+</option><option value="MegaMan Zero 3 [E].zip">MegaMan Zero 3 [E].zip
+</option><option value="MegaMan Zero 3.zip">MegaMan Zero 3.zip
+</option><option value="MegaMan Zero 4 [E].zip">MegaMan Zero 4 [E].zip
+</option><option value="MegaMan Zero 4.zip">MegaMan Zero 4.zip
+</option><option value="Megaman &amp; Bass.zip">Megaman &amp; Bass.zip
+</option><option value="Megaman Zero 1 [E].zip">Megaman Zero 1 [E].zip
+</option><option value="Megaman Zero 1.zip">Megaman Zero 1.zip
+</option><option value="Megaman Zero 2 [E].zip">Megaman Zero 2 [E].zip
+</option><option value="Megaman Zero 2.zip">Megaman Zero 2.zip
+</option><option value="Metal Gear Solid [E].zip">Metal Gear Solid [E].zip
+</option><option value="Metal Slug Advance [E].zip">Metal Slug Advance [E].zip
+</option><option value="Metroid - Zero Mission [E].zip">Metroid - Zero Mission [E].zip
+</option><option value="Metroid Fusion [E].zip">Metroid Fusion [E].zip
+</option><option value="Micro Machines 2 [GBC].zip">Micro Machines 2 [GBC].zip
+</option><option value="Midnight Club Street Racing.zip">Midnight Club Street Racing.zip
+</option><option value="Midway Arcade Hits.zip">Midway Arcade Hits.zip
+</option><option value="Mission Impossible - Operation Surma [E].zip">Mission Impossible - Operation Surma [E].zip
+</option><option value="Monster House [E].zip">Monster House [E].zip
+</option><option value="Monster Maker 4 - Flash Card [J].zip">Monster Maker 4 - Flash Card [J].zip
+</option><option value="Monster Rancher Advance.zip">Monster Rancher Advance.zip
+</option><option value="Monsters Inc.zip">Monsters Inc.zip
+</option><option value="Mortal Kombat Deadly Alliance.zip">Mortal Kombat Deadly Alliance.zip
+</option><option value="Motoracer Advance [E].zip">Motoracer Advance [E].zip
+</option><option value="NFL Blitz 2002.zip">NFL Blitz 2002.zip
+</option><option value="Nancy Drew - Message in a Haunted Mansion.zip">Nancy Drew - Message in a Haunted Mansion.zip
+</option><option value="Narnia - El leon la bruja y el armario [E].zip">Narnia - El leon la bruja y el armario [E].zip
+</option><option value="Naruto - Konoha Senki [J].zip">Naruto - Konoha Senki [J].zip
+</option><option value="Naruto - Ninja Council 2.zip">Naruto - Ninja Council 2.zip
+</option><option value="Naruto - Ninja Council.zip">Naruto - Ninja Council.zip
+</option><option value="Naruto - Uketsugareshi Hi No Ishi [J].zip">Naruto - Uketsugareshi Hi No Ishi [J].zip
+</option><option value="Naruto- Ninja council 2 [E].zip">Naruto- Ninja council 2 [E].zip
+</option><option value="Need For Speed Underground 1.zip">Need For Speed Underground 1.zip
+</option><option value="Need for Speed - Most Wanted [E].zip">Need for Speed - Most Wanted [E].zip
+</option><option value="Need for Speed Carbon - Own The City [E].zip">Need for Speed Carbon - Own The City [E].zip
+</option><option value="Need for Speed Most Wanted.zip">Need for Speed Most Wanted.zip
+</option><option value="Need for Speed Underground 2 [E].zip">Need for Speed Underground 2 [E].zip
+</option><option value="No Rules - Get Phat [E].zip">No Rules - Get Phat [E].zip
+</option><option value="Pac-Man Collection.zip">Pac-Man Collection.zip
+</option><option value="Pac-Man.zip">Pac-Man.zip
+</option><option value="Perfect Dark [GBC].zip">Perfect Dark [GBC].zip
+</option><option value="Phalanx - The Enforce Fighter A-144 [E].zip">Phalanx - The Enforce Fighter A-144 [E].zip
+</option><option value="Phil Of The Future.zip">Phil Of The Future.zip
+</option><option value="Pinball Advance [E].zip">Pinball Advance [E].zip
+</option><option value="Pinball hardcore.zip">Pinball hardcore.zip
+</option><option value="Pinobee - Wings of Adventure.zip">Pinobee - Wings of Adventure.zip
+</option><option value="Piratas del Caribe - El cofre del hombre muerto [E].zip">Piratas del Caribe - El cofre del hombre muerto [E].zip
+</option><option value="Pitfall - The Mayan Adventure.zip">Pitfall - The Mayan Adventure.zip
+</option><option value="Planet Monsters [E].zip">Planet Monsters [E].zip
+</option><option value="Planet of the Apes [E].zip">Planet of the Apes [E].zip
+</option><option value="Pokemon Azul [E][GB].zip">Pokemon Azul [E][GB].zip
+</option><option value="Pokemon Cristal [E][GBC].zip">Pokemon Cristal [E][GBC].zip
+</option><option value="Pokemon Esmeralda [E].zip">Pokemon Esmeralda [E].zip
+</option><option value="Pokemon Mundo misterioso [E].zip">Pokemon Mundo misterioso [E].zip
+</option><option value="Pokemon Oro [E][GBC].zip">Pokemon Oro [E][GBC].zip
+</option><option value="Pokemon Pinball RZ [E].zip">Pokemon Pinball RZ [E].zip
+</option><option value="Pokemon Plata [E][GBC].zip">Pokemon Plata [E][GBC].zip
+</option><option value="Pokemon Rojo [E][GB].zip">Pokemon Rojo [E][GB].zip
+</option><option value="Pokemon Rubi [E].zip">Pokemon Rubi [E].zip
+</option><option value="Pokemon tcg2 [J].zip">Pokemon tcg2 [J].zip
+</option><option value="Pokémon - Chaos Black Version.zip">Pokémon - Chaos Black Version.zip
+</option><option value="Pokémon Rojo fuego [E].zip">Pokémon Rojo fuego [E].zip
+</option><option value="Pokémon Verde hoja [E].zip">Pokémon Verde hoja [E].zip
+</option><option value="Pokémon Zafiro [E].zip">Pokémon Zafiro [E].zip
+</option><option value="Power Rangers Time Force.zip">Power Rangers Time Force.zip
+</option><option value="Prehistorik Man.zip">Prehistorik Man.zip
+</option><option value="Prince of Persia - The Sands of Time [E].zip">Prince of Persia - The Sands of Time [E].zip
+</option><option value="Punch King - Arcade Boxing.zip">Punch King - Arcade Boxing.zip
+</option><option value="Puyo Pop Fever [E].zip">Puyo Pop Fever [E].zip
+</option><option value="Quest RPG.zip">Quest RPG.zip
+</option><option value="Quieres Ser Millonario [E].zip">Quieres Ser Millonario [E].zip
+</option><option value="Racing Gears Advance [E].zip">Racing Gears Advance [E].zip
+</option><option value="Rainbow Six - Rogue Spear [E].zip">Rainbow Six - Rogue Spear [E].zip
+</option><option value="Rampage Puzzle Attack.zip">Rampage Puzzle Attack.zip
+</option><option value="Rave Master - Special Attack Force!.zip">Rave Master - Special Attack Force!.zip
+</option><option value="RayMan Advance [E].zip">RayMan Advance [E].zip
+</option><option value="Rayman - Hoodlums Revenge [E].zip">Rayman - Hoodlums Revenge [E].zip
+</option><option value="Rayman 10th Anniversary - Rayman Advance + Rayman 3 [E].zip">Rayman 10th Anniversary - Rayman Advance + Rayman 3 [E].zip
+</option><option value="Rayman Raving Rabbids [E].zip">Rayman Raving Rabbids [E].zip
+</option><option value="Razor Freestyle Scooter.zip">Razor Freestyle Scooter.zip
+</option><option value="Ready 2 Rumble Boxing - Round 2.zip">Ready 2 Rumble Boxing - Round 2.zip
+</option><option value="Rebelstar Tactical Command [E].zip">Rebelstar Tactical Command [E].zip
+</option><option value="Reign Of Fire [E].zip">Reign Of Fire [E].zip
+</option><option value="Robot Wars - Advanced Destruction [E].zip">Robot Wars - Advanced Destruction [E].zip
+</option><option value="Robotech - The Macross Saga [E].zip">Robotech - The Macross Saga [E].zip
+</option><option value="Robots [E].zip">Robots [E].zip
+</option><option value="Rocket Power Dream Scheme.zip">Rocket Power Dream Scheme.zip
+</option><option value="Rocky [E].zip">Rocky [E].zip
+</option><option value="Rugrats - Castle Capers.zip">Rugrats - Castle Capers.zip
+</option><option value="SSX Tricky.zip">SSX Tricky.zip
+</option><option value="Sabrewulf.zip">Sabrewulf.zip
+</option><option value="Samurai Jack - The Amulet Of Time.zip">Samurai Jack - The Amulet Of Time.zip
+</option><option value="Scooby-Doo and the Cyber Chase.zip">Scooby-Doo and the Cyber Chase.zip
+</option><option value="Shaman King - Legacy Of The Spirits - Soaring Hawk.zip">Shaman King - Legacy Of The Spirits - Soaring Hawk.zip
+</option><option value="Shaman King - Legacy Of The Spirits - Sprinting Wolf.zip">Shaman King - Legacy Of The Spirits - Sprinting Wolf.zip
+</option><option value="Shaman King - Master Of Spirits 2.zip">Shaman King - Master Of Spirits 2.zip
+</option><option value="Shaman King - Master Of Spirits.zip">Shaman King - Master Of Spirits.zip
+</option><option value="Shaman King 3 - Cho Senji Ryakketsu 3 [J].zip">Shaman King 3 - Cho Senji Ryakketsu 3 [J].zip
+</option><option value="Shinchan Aventuras en Cineland [E].zip">Shinchan Aventuras en Cineland [E].zip
+</option><option value="Shinchan contra los muñecos de Shock Gan [E].zip">Shinchan contra los muñecos de Shock Gan [E].zip
+</option><option value="Shining Force [E].zip">Shining Force [E].zip
+</option><option value="Shining Soul II [E].zip">Shining Soul II [E].zip
+</option><option value="Shining Soul [E].zip">Shining Soul [E].zip
+</option><option value="Shrek - Hassle At The Castle.zip">Shrek - Hassle At The Castle.zip
+</option><option value="Shrek - Smash N' Crash Racing [E].zip">Shrek - Smash N' Crash Racing [E].zip
+</option><option value="Shrek - Super Slam [E].zip">Shrek - Super Slam [E].zip
+</option><option value="Shrek - Swamp Kart [E].zip">Shrek - Swamp Kart [E].zip
+</option><option value="Shrek 2 - Beg For Mercy.zip">Shrek 2 - Beg For Mercy.zip
+</option><option value="Silent Hill - Play Novels [J].zip">Silent Hill - Play Novels [J].zip
+</option><option value="Silent Scope.zip">Silent Scope.zip
+</option><option value="Sim City 2000.zip">Sim City 2000.zip
+</option><option value="Snood.zip">Snood.zip
+</option><option value="Sonic Advance 1.zip">Sonic Advance 1.zip
+</option><option value="Sonic Advance 2 [E].zip">Sonic Advance 2 [E].zip
+</option><option value="Sonic Advance 2.zip">Sonic Advance 2.zip
+</option><option value="Sonic Advance 3.zip">Sonic Advance 3.zip
+</option><option value="Sonic Battle [E].zip">Sonic Battle [E].zip
+</option><option value="Spider-Man Battle for New York [E].zip">Spider-Man Battle for New York [E].zip
+</option><option value="Spiderman - Mysterio's Menace.zip">Spiderman - Mysterio's Menace.zip
+</option><option value="Spiderman 3 [E].zip">Spiderman 3 [E].zip
+</option><option value="Spiderman.zip">Spiderman.zip
+</option><option value="Sponge Bob Square Pants - SuperSponge.zip">Sponge Bob Square Pants - SuperSponge.zip
+</option><option value="Sports Illustrated For Kids - Football.zip">Sports Illustrated For Kids - Football.zip
+</option><option value="Sports Illustrated For Kids Baseball.zip">Sports Illustrated For Kids Baseball.zip
+</option><option value="Spyro - Season of Ice [E].zip">Spyro - Season of Ice [E].zip
+</option><option value="Spyro Fusion [E].zip">Spyro Fusion [E].zip
+</option><option value="Star Wars - The new droid army [E].zip">Star Wars - The new droid army [E].zip
+</option><option value="Star Wars Episode II - Attack of the Clones [E].zip">Star Wars Episode II - Attack of the Clones [E].zip
+</option><option value="Star Wars Episode III - Revenge of the Sith [E].zip">Star Wars Episode III - Revenge of the Sith [E].zip
+</option><option value="Star Wars Trilogy - Apprentice of the Force [E].zip">Star Wars Trilogy - Apprentice of the Force [E].zip
+</option><option value="StarWars- Jedi Power Battles.zip">StarWars- Jedi Power Battles.zip
+</option><option value="Street Fighter Zero 3 Upper [J].zip">Street Fighter Zero 3 Upper [J].zip
+</option><option value="Stuntman.zip">Stuntman.zip
+</option><option value="Super Bust-A-Move [E].zip">Super Bust-A-Move [E].zip
+</option><option value="Super Dodgeball Advance.zip">Super Dodgeball Advance.zip
+</option><option value="Super Ghouls'n Ghosts.zip">Super Ghouls'n Ghosts.zip
+</option><option value="Super Mario Advance 1.zip">Super Mario Advance 1.zip
+</option><option value="Super Mario Advance 2 - Super Mario World.zip">Super Mario Advance 2 - Super Mario World.zip
+</option><option value="Super Mario Advance 3 - Yoshi's Island [E].zip">Super Mario Advance 3 - Yoshi's Island [E].zip
+</option><option value="Super Mario Advance 3 - Yoshi's Island.zip">Super Mario Advance 3 - Yoshi's Island.zip
+</option><option value="Super Mario deluxe [GBC].zip">Super Mario deluxe [GBC].zip
+</option><option value="Super Monkey Ball Jr [E].zip">Super Monkey Ball Jr [E].zip
+</option><option value="Super Monkey Ball Jr.zip">Super Monkey Ball Jr.zip
+</option><option value="Super Street Fighter II Turbo Revival.zip">Super Street Fighter II Turbo Revival.zip
+</option><option value="Supercampeones [J].zip">Supercampeones [J].zip
+</option><option value="Sword of Mana [E].zip">Sword of Mana [E].zip
+</option><option value="Tactics Ogre.zip">Tactics Ogre.zip
+</option><option value="Tales of Phantasia [E].zip">Tales of Phantasia [E].zip
+</option><option value="Tang Tang.zip">Tang Tang.zip
+</option><option value="Teen Titans.zip">Teen Titans.zip
+</option><option value="Teenage Mutant Ninja Turtles [E].zip">Teenage Mutant Ninja Turtles [E].zip
+</option><option value="Tekken Advance.zip">Tekken Advance.zip
+</option><option value="Tetris Worlds.zip">Tetris Worlds.zip
+</option><option value="The Chevrolet Corvette 50th Anniversary.zip">The Chevrolet Corvette 50th Anniversary.zip
+</option><option value="The Incredible Hulk [E].zip">The Incredible Hulk [E].zip
+</option><option value="The Incredible Hulk.zip">The Incredible Hulk.zip
+</option><option value="The Incredibles - Rise Of The Underminer.zip">The Incredibles - Rise Of The Underminer.zip
+</option><option value="The Incredibles.zip">The Incredibles.zip
+</option><option value="The Invincible Iron Man.zip">The Invincible Iron Man.zip
+</option><option value="The King Of Fighters EX - Neo Blood.zip">The King Of Fighters EX - Neo Blood.zip
+</option><option value="The King Of Fighters EX 2 - Howling Blood.zip">The King Of Fighters EX 2 - Howling Blood.zip
+</option><option value="The Lord Of The Rings - The Two Towers [E].zip">The Lord Of The Rings - The Two Towers [E].zip
+</option><option value="The Lord of the Rings - The Fellowship of the Ring [E].zip">The Lord of the Rings - The Fellowship of the Ring [E].zip
+</option><option value="The Lord of the Rings - The Hobbit [E].zip">The Lord of the Rings - The Hobbit [E].zip
+</option><option value="The Lord of the Rings - The Return Of The King [E].zip">The Lord of the Rings - The Return Of The King [E].zip
+</option><option value="The Lord of the Rings - The Third Age [E].zip">The Lord of the Rings - The Third Age [E].zip
+</option><option value="The PowerPuff Girls - Him And Seek.zip">The PowerPuff Girls - Him And Seek.zip
+</option><option value="The Powerpuff Girls - Mojo Jojo A-Go-Go [E].zip">The Powerpuff Girls - Mojo Jojo A-Go-Go [E].zip
+</option><option value="The Scorpion King - Sword Of Osiris.zip">The Scorpion King - Sword Of Osiris.zip
+</option><option value="The Simpsons - Road Rage.zip">The Simpsons - Road Rage.zip
+</option><option value="The Wild Thornberrys - Chimp Chase.zip">The Wild Thornberrys - Chimp Chase.zip
+</option><option value="Thunderbirds - International Rescue.zip">Thunderbirds - International Rescue.zip
+</option><option value="Tir Et But [Frances].zip">Tir Et But [Frances].zip
+</option><option value="Tom and Jerry - The Magic Ring [E].zip">Tom and Jerry - The Magic Ring [E].zip
+</option><option value="Tomb Raider The Prophecey.zip">Tomb Raider The Prophecey.zip
+</option><option value="Tony Hawk Pro Skater 4.zip">Tony Hawk Pro Skater 4.zip
+</option><option value="Tony Hawk's Pro Skater 2.zip">Tony Hawk's Pro Skater 2.zip
+</option><option value="Tony Hawk's Pro Skater 3.zip">Tony Hawk's Pro Skater 3.zip
+</option><option value="Tony Hawks 2 [GBC].zip">Tony Hawks 2 [GBC].zip
+</option><option value="Tony Hawks Downhill Jam [E].zip">Tony Hawks Downhill Jam [E].zip
+</option><option value="Top Gear GT Championship.zip">Top Gear GT Championship.zip
+</option><option value="Top Gear Rally [E].zip">Top Gear Rally [E].zip
+</option><option value="Total Soccer Manager [E].zip">Total Soccer Manager [E].zip
+</option><option value="Total Soccer de Steven Gerrard 2002 [E].zip">Total Soccer de Steven Gerrard 2002 [E].zip
+</option><option value="Tweety and the Magic Gems.zip">Tweety and the Magic Gems.zip
+</option><option value="V-Rally 3 [E].zip">V-Rally 3 [E].zip
+</option><option value="Van Helsing.zip">Van Helsing.zip
+</option><option value="Virtual Kasparov.zip">Virtual Kasparov.zip
+</option><option value="WWF Road to Wrestlemania.zip">WWF Road to Wrestlemania.zip
+</option><option value="Wakeboarding Unleashed.zip">Wakeboarding Unleashed.zip
+</option><option value="Wario Land 4.zip">Wario Land 4.zip
+</option><option value="Wario Ware-inc.zip">Wario Ware-inc.zip
+</option><option value="Woody Woodpecker In Crazy Castle 5.zip">Woody Woodpecker In Crazy Castle 5.zip
+</option><option value="Worms Armageddon [E][GBC].zip">Worms Armageddon [E][GBC].zip
+</option><option value="Worms Blast [E].zip">Worms Blast [E].zip
+</option><option value="Worms [GB].zip">Worms [GB].zip
+</option><option value="WrestleMania.zip">WrestleMania.zip
+</option><option value="X-Men - The Official Game [E].zip">X-Men - The Official Game [E].zip
+</option><option value="X-Men- Reign of Apocalypse.zip">X-Men- Reign of Apocalypse.zip
+</option><option value="Xploder Advance [E].zip">Xploder Advance [E].zip
+</option><option value="Yoshi's Universal Gravitation [E].zip">Yoshi's Universal Gravitation [E].zip
+</option><option value="Yu Yu Hakusho - Ghostfiles - Tournament Tactics [E].zip">Yu Yu Hakusho - Ghostfiles - Tournament Tactics [E].zip
+</option><option value="Yu-Gi-Oh! - Las cartas sagradas [E].zip">Yu-Gi-Oh! - Las cartas sagradas [E].zip
+</option><option value="Yu-Gi-Oh! - Ultimate Masters Edition [E].zip">Yu-Gi-Oh! - Ultimate Masters Edition [E].zip
+</option><option value="Yu-Gi-Oh! Destiny Board Traveler [E].zip">Yu-Gi-Oh! Destiny Board Traveler [E].zip
+</option><option value="Yu-Gi-Oh! Dungeondice Monsters [J].zip">Yu-Gi-Oh! Dungeondice Monsters [J].zip
+</option><option value="Yu-Gi-Oh! GX - Duel Academy.zip">Yu-Gi-Oh! GX - Duel Academy.zip
+</option><option value="Zelda - A Link To The Past Four Swords [E].zip">Zelda - A Link To The Past Four Swords [E].zip
+</option><option value="Zelda - Oracle of ages [E][GBC].zip">Zelda - Oracle of ages [E][GBC].zip
+</option><option value="Zelda - The Minish Cap [E].zip">Zelda - The Minish Cap [E].zip
+</option><option value="Zelda DX [E][GBC].zip">Zelda DX [E][GBC].zip
+</option><option value="Zidane Football Generations [GBC].zip">Zidane Football Generations [GBC].zip
+</option><option value="Zoids Legacy.zip">Zoids Legacy.zip
+ </option></select>
+
+
+
+     <button id="input" value="Mortal Kombat Deadly Alliance.zip" onclick="go();">ألعب</button>       
+            قم بأختيار اللعبة واضغط ألعب واستمتع
+        </div>
+
+
+        <script>
+				
+					var select = document.getElementById('rom');
+   var input = document.getElementById('input');
+
+select.addEventListener('change', function(){
+    input.value = select.value;
+
+});
+
+            function go() {
+
+var url = input.value;
+                var core = null; 
+
+       var extension = url.split(".").pop().toLowerCase();
+
+					if (extension=="nes")
+								{
+							 core = "nes"; 
+								}
+							else if (extension=="smc")
+								{
+								 core = "snes";
+								}   
+
+							else if (extension=="bin" || extension=="smd")
+								{
+							 core = "segaMD"; 
+								}
+							else if (extension=="n64" || extension=="z64")
+								{
+								 core = "n64";
+								}   
+
+	else	if (extension=="gba" || extension=="gbc" || extension=="gb")
+								{
+							 core = extension
+								}
+							else if (extension=="zip")
+								{
+								 core = "gba";
+								}   
+else if (extension=="bi1")
+								{
+								 core = "psx";
+								}   
+
+
+
+
+                 
+                 
+             
+                 
+                        
+                       
+                const div = document.createElement("div")
+                const sub = document.createElement("div")
+                const script = document.createElement("script")
+
+                sub.id = "game"
+                div.id = "display"
+stuff.remove()
+                box.remove()
+                div.appendChild(sub)
+                document.body.appendChild(div)
+window.EJS_language = 'ar-AR';
+                window.EJS_player = "#game"
+                window.EJS_biosUrl = ""             
+
+                    EJS_language = `ar-AR`
+                window.EJS_core = core   
+   window. EJS_gameUrl = url
+            window.EJS_oldCores = true; 
+                window.EJS_pathtodata = "../data/"
+                window.EJS_startOnLoaded = true;
+
+                if (window.location.hostname === "demo.emulatorjs.org") {
+                    window.EJS_AdUrl = "https://ads.emulatorjs.org/";
+                }
+                
+
+                script.src = "../data/loader.js"
+                document.body.appendChild(script)
+            }
+
+            box.ondragover = () => box.setAttribute("drag", true)
+            box.ondragleave = () => box.removeAttribute("drag")
+        </script>
+
+
+<script>
+
+var text = e.options[e.selectedIndex].text;
+
+</script>
+	    
+	
+
+	<h2>brought to you by M.Aleiwi</h2>
+
+</center>
+
+
+</body></html>
