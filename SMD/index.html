@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<br /><html><head><meta charset="UTF-8">
-  <meta name="viewport" content="width = device-width, initial-scale = 1">
+<br /><html><head><meta name="viewport" content="width = device-width, initial-scale = 1">
 
 <style>
             body, html {
@@ -25,7 +24,7 @@ font-weight: bold;
                 font-weight: bold;                                
 }
             body {
-background: url(ico/smd.png) no-repeat  -50px 250px;
+background: url(ico/gba.png) no-repeat  -50px 250px;
                 font-family: monospace;
                 font-weight: bold;
                 font-size: 12px;
@@ -142,7 +141,7 @@ overflow: visible; !important;
 
    <meta charset="UTF-8">
    <link rel="shortcut icon" href="./.favicon.ico">
-   <title>سيجا</title>
+   <title>جيم بوي ادڤانس</title>
 
    <link rel="stylesheet" href="./.stylge.css">
    <script src="./.sorttable.js"></script>
@@ -156,25 +155,23 @@ overflow: visible; !important;
 	<p id="status"></p>
 <center>
 <div id="stuff">
-<h1>محطة ألعاب السيجا</h1>
+<h1>محطة ألعاب جيم بوي ادڤانس</h1>
 </div>
-
+<script>
+</script>
 	<div id="box">
 <select id="rom" name="rom">
-<option value="">- اختيار لعبة - </option><option value="Battletoads_(JUE)_[!].bin">Battletoads_(JUE)_[!].bin
-</option><option value="Battletoads_and_Double_Dragon_(U)_[c][!].bin">Battletoads_and_Double_Dragon_(U)_[c][!].bin
-</option><option value="Chess_(Unl)_[!].bin">Chess_(Unl)_[!].bin
-</option><option value="Dune_-_The_Battle_for_Arrakis_(E).bin">Dune_-_The_Battle_for_Arrakis_(E).bin
-</option><option value="Golden_Axe_II_(JUE)_[!].smd">Golden_Axe_II_(JUE)_[!].smd
-</option><option value="Sonic_and_Knuckles_&amp;_Sonic_1_(JUE)_[!].bin">Sonic_and_Knuckles_&amp;_Sonic_1_(JUE)_[!].bin
-</option><option value="Sonic_the_Hedgehog_(JUE)_[!].bin">Sonic_the_Hedgehog_(JUE)_[!].bin
-</option><option value="Sonic_the_Hedgehog_2_(JUE)_[!].smd">Sonic_the_Hedgehog_2_(JUE)_[!].smd
-</option><option value="Sonic_the_Hedgehog_3_(U)_[!].smd">Sonic_the_Hedgehog_3_(U)_[!].smd
+<option value="">- اختيار لعبة - </option><option value="1943.zip">1943.zip
+</option><option value="Castlevania - Harmony Of Dissonance [E].zip">Castlevania - Harmony Of Dissonance [E].zip
+</option><option value="Kirby &amp; The Amazing Mirror [E].zip">Kirby &amp; The Amazing Mirror [E].zip
+</option><option value="Mario &amp; Luigi Superstar Saga [E].zip">Mario &amp; Luigi Superstar Saga [E].zip
+</option><option value="MegaMan Zero 4 [E].zip">MegaMan Zero 4 [E].zip
+</option><option value="Shaman King - Master Of Spirits.zip">Shaman King - Master Of Spirits.zip
  </option></select>
 
 
 
-     <button id="input" value="s.smd" onclick="go();">ألعب</button>       
+     <button id="input" value="Mortal Kombat Deadly Alliance.zip" onclick="go();">ألعب</button>       
             قم بأختيار اللعبة واضغط ألعب واستمتع
         </div>
 
@@ -220,7 +217,7 @@ var url = input.value;
 								}
 							else if (extension=="zip")
 								{
-								 core = "gb";
+								 core = "gba";
 								}   
 else if (extension=="bi1")
 								{
@@ -256,6 +253,9 @@ window.EJS_language = 'ar-AR';
             window.EJS_oldCores = true; 
                 window.EJS_pathtodata = "../data/"
                 window.EJS_startOnLoaded = true;
+
+
+
 window.EJS_defaultOptions = {
 
     'save-state-slot': 4,
@@ -280,6 +280,9 @@ window.EJS_Buttons = {
     screenshot: false,
     cacheManager: false
 }
+
+
+
 
                 if (window.location.hostname === "demo.emulatorjs.org") {
                     window.EJS_AdUrl = "https://ads.emulatorjs.org/";
