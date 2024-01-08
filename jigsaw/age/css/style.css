@@ -1,0 +1,229 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, #000, darkblue);
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Play', sans-serif;
+    position: relative;
+    top: 0px;
+    color: red;
+font-size:10px;
+z-index:9;
+}
+
+#container {
+    height: 320px;
+    width: 320px;
+    background-color: #000;
+    margin: 0 auto;
+    top: 80px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px 0px #009de4;
+    /*  box-shadow: [horizontal offset] [vertical offset] 
+    [blur radius] [spread radius] [color]; */
+    position: relative;
+}
+
+#score {
+    background-color: #000;
+    color: red;
+    padding: 11px;
+    position: absolute;
+    right: 50%;
+    box-shadow: 0px 4px #9da853;
+}
+
+#correct {
+    position: absolute;
+    left: 45%;
+    background-color: #42e252;
+    color: white;
+    padding: 11px;
+    display: none;
+}
+
+#wrong {
+    position: absolute;
+    left: 42%;
+    background-color: #de401a;
+    color: white;
+    padding: 11px;
+    display: none;
+}
+
+#question {
+    width: 320px;
+    height: 150px;
+    margin: 80px auto 40px auto;
+    background-color: #000;
+    box-shadow: 0px 4px #535aa8;
+    text-align: center;
+    /* for horizontal center */
+    font-size: 40px;
+    font-family: 'Play', sans-serif;
+    color: red;
+}
+
+#instruction {
+font-size: 20px;
+color: yellow;
+    width: 320px;
+    height: 50px;
+    background-color: #darkblue;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0px 4px #8153a8;
+}
+
+#choices {
+    width: 100%;
+    height: 100px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+font-size: 30px;
+    width: 85px;
+    height: 85px;
+    background-color: white;
+    flex-direction: column;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 80px;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.box:hover,
+#startreset:hover {
+    background-color: #9c89F6;
+    color: white;
+    box-shadow: 0px 4px #6b54d3;
+}
+
+.box:active,
+#startreset:active {
+    box-shadow: 0px 0px #6b54d3;
+    top: 4px;
+}
+
+#startreset {
+font-size: 15px;
+    width: 50px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0px auto;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    
+color: yellow;
+}
+
+#timeremaining {
+font-size: 11px;
+    width: 130px;
+    height:70px;
+    padding: 0px;
+    position: absolute;
+    top: 465px;
+  left: 50%;
+    background-color: rgba(4, 4, 4, 0.7);
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    display: none;
+color: red;
+}
+
+#gameOver {
+    width: 320px;
+    height: 100px;
+    background: linear-gradient(blue, black);
+    color: red;
+    font-size: 10px;
+    text-align: center;
+    
+    position: absolute;
+    top: 0;
+    left: 40px;
+   // padding: 50px;
+    z-index: 2;
+    display: none;
+}
+
+@media (max-width: 570px) {
+    #container {
+        width: 320px;
+        top: 0%;
+    }
+
+    #correct {
+        left: 40%;
+    }
+
+    #wrong {
+        left: 38%;
+    }
+
+    #question,
+    #instruction,
+    #choices {
+        width: 100%;
+    }
+
+    #startreset {
+        width: 90px;
+        margin-left: 0;
+    }
+
+    #timeremaining {
+        
+        
+        text-align: center;
+        display: block;
+color: red;
+    }
+
+    #gameOver {
+        width: 320px;
+        height: 250px;
+        background: linear-gradient(purple, #F3706C);
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding-top: 90px;
+        z-index: 2;
+        display: none;
+    }
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+

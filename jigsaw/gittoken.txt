@@ -1,0 +1,15 @@
+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
+git branch -m main 
+
+git add origin https://github.com/xodiosx/WedrawChat.git
+
+
+
+ git remote add origin https://github.com/xodiosx/Emu.git
+
+git push -u -f origin main
+
+
+mohammedaleiwi@gmail.com
+
+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

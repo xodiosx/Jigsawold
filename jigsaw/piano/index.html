@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+
+    <title>saw music puzzle</title>
+
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="pop.css">
+    <script src="script.js" defer></script>
+<script src="timer.js" defer></script>
+  </head>  
+  <body>
+  	<div id="t1" style=" width:80%;
+     display: fixed;
+left: 50%;  
+color:red;
+left: 62%;  
+position:fixed;  
+z-index:9999;          
+  justify-content:center; 
+  padding-top: 12%;">
+        الوقت المتبقي:
+    </div>
+    <div id="t2" style="display: fixed; 
+    width:80%; 
+left: 50%;   
+       position:fixed;        
+          justify-content:center; 
+z-index:9999;   
+         padding-top: 0%;">
+        <input id="minutes" type="text" style="width: 16%; border: none; font-size: 30px;
+position:fixed; 
+background-color: #000;
+         display: fixed;           justify-content:center; padding-top: 0%;    
+left: 65%;
+z-index:9999;                  font-weight: bold; color: black;">
+          
+        <input id="seconds" type="text" style="width: 23%; border: none; font-size: 30px;
+left: 75%;
+    
+background-color: #000;
+       display: fixed;
+position:fixed;     
+      justify-content:center; 
+      padding-top: 0%;               font-weight: bold; color: black;
+z-index:9999; !important;  
+">
+    </div>
+  	<center>
+
+    <h1>عزف المقطوععة من الذاكرة </h1>
+
+    <div class="container">
+
+     
+<div class="popup-image">
+     <span  style="display: fixed; 
+    
+left: -80%;   
+       position:fixed;        
+         
+z-index:9999;   
+         padding-top: 0%;">&times;</span>
+    <img src="" alt="">
+</div>
+
+
+    </div>
+    <p>
+      أبدء اللعبة بل ضغط على أبدء!
+    </p>
+    <button id="startBtn" onclick="startGame()">
+      أبدء
+    </button>
+    <button id="stopBtn" class="hidden" onclick="stopGame()">
+      إيقاف
+    </button>  
+
+    <input type="number" id="total" name="total" value="5" min="1" max="100" style="width: 23%; border: none; font-size: 30px;
+left: 75%;
+    
+background-color: #000;
+       display: none;
+position:fixed;     
+        
+">
+    
+    <progress value="0" max="10" id="progressBar"></progress>
+    
+    <img id="tally1" style="display: none;" src="imgs/Mistake.png" alt="Tally 1" width="35" height="25">
+    <img id="tally2" style="display: none;" src="imgs/Mistake.png" alt="Tally 2" width="25" height="25">
+    <img id="tally3" style="display: none;" src="imgs/Mistake.png" alt="Tally 3" width="25" height="25">
+<audio src="audio/sawnote.mp3" id="saw"></audio>
+    <audio src="audio/C4.mp3" id="aud1"></audio>
+    <audio src="audio/D4.mp3" id="aud2"></audio>
+    <audio src="audio/E4.mp3" id="aud3"></audio>
+    <audio src="audio/F4.mp3" id="aud4"></audio>
+    <audio src="audio/G4.mp3" id="aud5"></audio>
+    <audio src="audio/A4.mp3" id="aud6"></audio>
+    <audio src="audio/B4.mp3" id="aud7"></audio>
+    <audio src="audio/C5.mp3" id="aud8"></audio>
+    
+    <div id="gameButtonArea" 
+>
+      <button id="button1" onclick="guess(1)" onmousedown="play('aud1')" >  </button>
+      <button id="button2" onclick="guess(2)" onmousedown="play('aud2')" >  </button>
+      <button id="button3" onclick="guess(3)" onmousedown="play('aud3')" >  </button>
+      <button id="button4" onclick="guess(4)" onmousedown="play('aud4')" >  </button>
+      <button id="button5" onclick="guess(5)" onmousedown="play('aud5')" >  </button>
+      <button id="button6" onclick="guess(6)" onmousedown="play('aud6')" >  </button>
+      <button id="button7" onclick="guess(7)" onmousedown="play('aud7')" >  </button>
+      <button id="button8" onclick="guess(8)" onmousedown="play('aud8')" >  </button>
+    </div>
+
+
+       <span id="audio">
+			<audio id="yes" preload="auto">			
+				<source src="audio/sawnote.mp3" type="audio/mpeg">
+			</audio>
+			
+    	
+    	</center>
+    
+    </body>
+<script src="eruda.js"></script>
+<script>eruda.init();</script>
+
+</html>

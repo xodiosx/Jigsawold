@@ -1,0 +1,298 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  background-image:url('imgs/saw.jpeg');
+/*   background-color: #252e36; */
+  color: white;
+justify-content:center; 
+}
+
+h1 {
+  font-family: verdana, arial, sans-serif;
+  color: #ffedfe;
+position: center;
+font-size:12px;
+height:20px;
+width:300px;
+
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+  height:40px;
+width:60px
+}
+
+
+
+
+.hidden{
+  display: none;
+}
+
+#button1 {
+	
+    background-image:url('imgs/C1.jpg');
+    background-size:cover;
+}
+
+#button2 {
+    background-image:url('imgs/D1.jpg');
+    background-size:cover;
+}
+
+#button3 {
+    background-image:url('imgs/E1.jpg');
+    background-size:cover;
+}
+
+#button4 {
+    background-image:url('imgs/F1.jpg');
+    background-size:cover;
+}
+
+#button5 {
+    background-image:url('imgs/G1.jpg');
+    background-size:cover;
+}
+
+#button6 {
+    background-image:url('imgs/A1.jpg');
+    background-size:cover;
+}
+
+#button7 {
+    background-image:url('imgs/B1.jpg');
+    background-size:cover;
+}
+
+#button8 {
+    background-image:url('imgs/C2.jpg');
+    background-size:cover;
+}
+
+#button1:active, #button1.lit {
+  background-image:url('imgs/C1Shade.jpg');
+  background-size:cover;
+}
+
+#button2:active, #button2.lit {
+  background-image:url('imgs/D1Shade.jpg');
+  background-size:cover;
+}
+
+#button3:active, #button3.lit {
+  background-image:url('imgs/E1Shade.jpg');
+  background-size:cover;
+}
+
+#button4:active, #button4.lit {
+  background-image:url('imgs/F1Shade.jpg');
+  background-size:cover;
+}
+
+#button5:active, #button5.lit {
+  background-image:url('imgs/G1Shade.jpg');
+  background-size:cover;
+}
+
+#button6:active, #button6.lit {
+  background-image:url('imgs/A1Shade.jpg');
+  background-size:cover;
+}
+
+#button7:active, #button7.lit {
+  background-image:url('imgs/B1Shade.jpg');
+  background-size:cover;
+}
+
+#button8:active, #button8.lit {
+  background-image:url('imgs/C2Shade.jpg');
+  background-size:cover;
+}
+#gameButtonArea > button {
+  
+ margin:px;
+}
+@media screen and (orientation: portrait) {
+  #
+#gameButtonArea  {
+  width:340px;
+ height:600px;
+ margin:px;
+}
+#t1 {
+
+   
+    
+top:0%;
+
+}
+
+#t2 {
+
+    
+top:0%;
+
+
+}
+#minutes { 
+    
+top:0%;
+
+}
+
+#seconds {
+
+ 
+top:0%;
+}
+
+#button1 {
+	
+    width:35px;
+ height:220px;
+}
+
+#button2 {
+    width:35px;
+ height:220px;
+}
+
+#button3 {
+    width:35px;
+ height:220px;
+}
+
+#button4 {
+    width:35px;
+ height:220px;
+}
+
+#button5 {
+    width:40px;
+ height:220px;
+}
+
+#button6 {
+    width:40px;
+ height:220px;
+}
+
+#button7 {
+    width:35px;
+ height:220px;
+}
+
+#button8 {
+    width:35px;
+ height:220px;
+}
+
+
+body {
+
+  width:100%;
+ height:100%;
+}
+}
+
+/* For landscape, we want the toolbar stick on the left */
+
+@media screen and (orientation: landscape) {
+  #gameButtonArea {
+  width:700px;
+ height:200px;
+top:5;
+position: absolute;
+left:0%;
+}
+
+
+
+#button1 {
+	
+    width:70px;
+ height:200px;
+}
+
+#button2 {
+    width:70px;
+ height:200px;
+}
+
+#button3 {
+    width:70px;
+ height:200px;
+}
+
+#button4 {
+    width:70px;
+ height:200px;
+}
+
+#button5 {
+    width:70px;
+ height:200px;
+}
+
+#button6 {
+    width:70px;
+ height:200px;
+}
+
+#button7 {
+    width:70px;
+ height:200px;
+}
+
+#button8 {
+    width:70px;
+ height:200px;
+}
+
+#t1 {
+
+   
+    width:70px;
+ height:200px;
+top:-20%;
+Left:100%;
+}
+
+#t2 {
+
+    width:70px;
+ height:200px;
+top:0%;
+Left:100%;
+}
+body {
+  width:100%;
+ height:200px;
+}
+h1 {
+  font-size: 13px;
+top:0%;
+}
+p{
+top:0;
+font-size:12px
+}
+#minutes { 
+    
+top:0%;
+Left:0%;
+}
+
+#seconds {
+top:0%;
+}
+}
+p{
+top:0;
+font-size:12px
+}

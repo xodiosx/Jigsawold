@@ -1,0 +1,2 @@
+<script src="eruda.js"></script>
+<script>eruda.init();</script>
