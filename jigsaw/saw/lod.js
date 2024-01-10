@@ -50,7 +50,7 @@ const handleComplete = () => {
   document.getElementById('preload-container').innerHTML = '<h1>COMPLETE!</h1>';
 setTimeout(function(){
    
-location=("/saw/index.html");
+location=("/index.html");
 
  },3000)
 };
