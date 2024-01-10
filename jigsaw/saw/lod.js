@@ -1,10 +1,6 @@
- var diir='static/media/';
-alert(diir+'ss/bgm21.mp3');
-
-
 const loadAssets = () => {
-var diir='static/media/';
- document.getElementById('preload-container').innerHTML = '<h1>LOADING... <span id="loading-percent">' + 0 + '</span>%</h1>';
+
+ const diir='static/media/'; document.getElementById('preload-container').innerHTML = '<h1>LOADING... <span id="loading-percent">' + 0 + '</span>%</h1>';
 
   const queue = new createjs.LoadQueue();
 
@@ -54,7 +50,7 @@ const handleComplete = () => {
   document.getElementById('preload-container').innerHTML = '<h1>COMPLETE!</h1>';
 setTimeout(function(){
    
-location=("index.html");
+location=("/index.html");
 
  },3000)
 };
