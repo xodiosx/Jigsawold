@@ -9,7 +9,7 @@ const loadAssets = () => {
 
   queue.loadManifest([
 {id:'img1',src:diir+'Pirate_Cove-1.webp'},
-{id:'img2',src:'static/media/East_Hall-f.webp'},
+{id:'img2',src:diir+'East_Hall-f.webp'},
 {id:'img3',src:diir+'East_Hall-c.webp'},
 {id:'img4',src:diir+'Freddy-Jumpscare1.gif'},
 {id:'img5',src:diir+'Restrooms2.webp'},
@@ -30,7 +30,7 @@ const loadAssets = () => {
 {id:'img20',src:diir+'ss/bgm21.mp3'},
 {id:'img21',src:diir+'ss/bgm22.mp3'}
   ]);
-
+alert(diir+'ss/bgm21.mp3')
   queue.load();
 };
 
@@ -50,7 +50,7 @@ const handleComplete = () => {
   document.getElementById('preload-container').innerHTML = '<h1>COMPLETE!</h1>';
 setTimeout(function(){
    
-location=("/index.html");
+location=("index.html");
 
  },3000)
 };
