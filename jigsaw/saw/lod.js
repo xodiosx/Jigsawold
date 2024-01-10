@@ -1,6 +1,10 @@
-const loadAssets = () => {
+ var diir='static/media/';
+alert(diir+'ss/bgm21.mp3');
 
- const diir='static/media/'; document.getElementById('preload-container').innerHTML = '<h1>LOADING... <span id="loading-percent">' + 0 + '</span>%</h1>';
+
+const loadAssets = () => {
+var diir='static/media/';
+ document.getElementById('preload-container').innerHTML = '<h1>LOADING... <span id="loading-percent">' + 0 + '</span>%</h1>';
 
   const queue = new createjs.LoadQueue();
 
@@ -30,7 +34,7 @@ const loadAssets = () => {
 {id:'img20',src:diir+'ss/bgm21.mp3'},
 {id:'img21',src:diir+'ss/bgm22.mp3'}
   ]);
-alert(diir+'ss/bgm21.mp3')
+
   queue.load();
 };
 
