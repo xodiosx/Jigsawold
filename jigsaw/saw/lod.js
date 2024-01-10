@@ -1,6 +1,6 @@
 const loadAssets = () => {
 
- const diir='https://xodiosx.github.io/Jigsaw/jigsaw/saw/static/media/'; document.getElementById('preload-container').innerHTML = '<h1>LOADING... <span id="loading-percent">' + 0 + '</span>%</h1>';
+ const diir='static/media/'; document.getElementById('preload-container').innerHTML = '<h1>LOADING... <span id="loading-percent">' + 0 + '</span>%</h1>';
 
   const queue = new createjs.LoadQueue();
 
@@ -9,7 +9,7 @@ const loadAssets = () => {
 
   queue.loadManifest([
 {id:'img1',src:diir+'Pirate_Cove-1.webp'},
-{id:'img2',src:diir+'East_Hall-f.webp'},
+{id:'img2',src:'static/media/East_Hall-f.webp'},
 {id:'img3',src:diir+'East_Hall-c.webp'},
 {id:'img4',src:diir+'Freddy-Jumpscare1.gif'},
 {id:'img5',src:diir+'Restrooms2.webp'},
