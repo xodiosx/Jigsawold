@@ -1,6 +1,6 @@
 const loadAssets = () => {
 
- const diir='static/media/'; document.getElementById('preload-container').innerHTML = '<h1>LOADING... <span id="loading-percent">' + 0 + '</span>%</h1>';
+ const diir='https://xodiosx.github.io/Jigsaw/jigsaw/saw/static/media/'; document.getElementById('preload-container').innerHTML = '<h1>LOADING... <span id="loading-percent">' + 0 + '</span>%</h1>';
 
   const queue = new createjs.LoadQueue();
 
