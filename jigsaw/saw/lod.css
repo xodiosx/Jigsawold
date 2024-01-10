@@ -1,0 +1,28 @@
+body {
+  font-family: 'Wendy One', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  background: #000;
+}
+
+#preload-container {
+position: fixed;
+top:30%;
+  width: 100%;
+  text-align: center;
+  padding-top: 80px;
+  color: red;
+}
+
+button {
+  font-family: 'Wendy One', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border: 3px solid #6f4c05;
+  box-shadow: none;
+  outline: none;
+  background: yellow;
+  padding: 10px;
+  color: #6f4c05;
+  border-radius: 5px;
+}
