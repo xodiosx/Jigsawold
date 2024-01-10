@@ -1,8 +1,130 @@
+	// Check if a new cache is available on page load.	 
+	function checkAppCache() {
+		console.log('check AppCache');
+		window.applicationCache.addEventListener('updateready', function (e) {
+			console.log("AppCache: updateready");
+			if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+
+				// Browser downloaded a new app cache.
+				// Swap it in and reload the page to get the new hotness.
+				window.applicationCache.swapCache();
+				if (confirm('A new version of this site is available. Load it?')) {
+					window.location.reload();
+				}
+
+			} else {
+				// Manifest didn't change. Nothing new to server.
+			}
+		}, false);
+
+		window.applicationCache.addEventListener('cached', function (e) {
+			console.log("AppCache: cached");
+		}, false);
+
+	}
+
+
+	// Action starts here:
+
+	function hideAdressbar() {
+		console.log("hide adressbar");
+		$("html").scrollTop(1);
+		$("body").scrollTop(1);
+	}
+
+	$(document).ready(function () {
 
 
 
+		
+		// Hide address bar
+		hideAdressbar();
+
+		if (window.applicationCache != null) {checkAppCache();
+}
+
+	});
 
 
+setTimeout(function(){
+   
+document.getElementById('rready').style.display="none";
+loadAssets();
+ },10)
+
+const loadAssets = () => {
+
+ const diir='static/media/'; 
+document.getElementById('preload-container').innerHTML = '<h9> ,,, جاري تحميل النظام ,,, <span id="loading-percent">' + 0 + '</span>%</h9>';
+
+  const queue = new createjs.LoadQueue();
+
+  queue.on("progress", handleProgress, this);
+  queue.on("complete", handleComplete, this);
+
+  queue.loadManifest([
+{id:'img65',src:diir+'blip3.mp3'},
+{id:'img66',src:diir+'putdown.mp3'},
+{id:'img67',src:diir+'Clock.mp3'},
+{id:'img68',src:diir+'garble1.mp3'},
+{id:'img69',src:diir+'garble2.mp3'},
+{id:'img70',src:diir+'jumpscare.mp3'},
+{id:'img71',src:diir+'powerdown.mp3'},
+{id:'img72',src:diir+'haul.ogg'},
+{id:'img73',src:diir+'welcome.mp3'},
+{id:'img74',src:diir+'breath2.mp3'},
+{id:'img75',src:diir+'windowscare.mp3'},
+{id:'img76',src:diir+'CameraIdle2.mp3'},
+{id:'img96',src:diir+'powerdown2.mp3'},
+{id:'img77',src:diir+'Dead.mp3'},
+{id:'img78',src:diir+'musicbox.mp3'},
+{id:'img79',src:diir+'ss/bgm22.mp3'},
+{id:'img80',src:diir+'ss/bgm21.mp3'},
+{id:'img81',src:diir+'ss/cryl.mp3'},
+{id:'img82',src:diir+'ss/knockl.mp3'},
+{id:'img83',src:diir+'ss/bgm.mp3'},
+{id:'img84',src:diir+'ss/cryr.mp3'},
+{id:'img85',src:diir+'ss/wsl.mp3'},
+{id:'img86',src:diir+'ss/cry2l.mp3'},
+{id:'img87',src:diir+'ss/fsl.mp3'},
+{id:'img88',src:diir+'ss/wsr.mp3'},
+{id:'img89',src:diir+'ss/gsl.mp3'},
+{id:'img90',src:diir+'ss/fsr.mp3'},
+{id:'img91',src:diir+'ss/knock2l.mp3'},
+{id:'img92',src:diir+'ss/gsr.mp3'},
+{id:'img93',src:diir+'ss/lsl.mp3'},
+{id:'img94',src:diir+'ss/doorl.mp3'},
+{id:'img95',src:diir+'ss/lsr.mp3'},
+{id:'img96',src:diir+'ss/doorr.mp3'}
+
+  ]);
+
+  queue.load();
+};
+
+
+
+const handleProgress = (e) => {
+
+  let percent = Math.round(e.progress * 100);
+
+  document.getElementById('loading-percent').innerHTML = percent;
+};
+
+
+
+const handleComplete = () => {
+
+  document.getElementById('preload-container').innerHTML = '<h9>جاري التشغيل!</h9>';
+navigator.vibrate([
+  100, 50, 100, 50, 100, 50, 200,
+])
+setTimeout(function(){
+   
+document.getElementById('rready').style.display="block";
+document.getElementById('preload-container').style.display="none";
+ },2500)
+};
 
 
 
